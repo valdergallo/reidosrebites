@@ -7,6 +7,7 @@ from leadpage.sitemaps import StaticViewSitemap
 from leadpage.views import LeadPageView
 from leadpage.sitemaps import LeadPageSitemap
 from products.sitemaps import ProductsSitemap
+from django.conf import settings
 
 
 sitemaps = {
@@ -22,3 +23,7 @@ urlpatterns = [
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
         name='django.contrib.sitemaps.views.sitemap')
 ]
+
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
