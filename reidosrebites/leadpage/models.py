@@ -1,17 +1,15 @@
-# encoding: utf-8
 from django.db import models
 from django.contrib.sitemaps import ping_google
 
 
-class Product(models.Model):
-    image = models.ImageField(upload_to='products/')
-    name = models.CharField(max_length=150)
-    description = models.CharField(max_length=250)
-    is_draft = models.BooleanField(default=False)
-    price = models.DecimalField(max_digits=5, decimal_places=2)
+class Entry(models.Model):
+    title = models.CharField(max_length=150, null=True, blank=True)
+    description = models.TextField(null=True, blank=True)
+    created_at = models.DateField(auto_now_add=True)
+    updated_at = models.DateField(auto_now=True)
 
     def __str__(self):
-        return self.name
+        return self.title
 
     def save(self, force_insert=False, force_update=False):
         super().save(force_insert, force_update)
