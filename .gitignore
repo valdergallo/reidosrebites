@@ -2,16 +2,17 @@
 
 # dependencies
 node_modules
-bin
-fonts
-include
-lib
 
 # testing
 coverage
 
 # production
 build
+db.sqlite3
+bin
+fonts
+include
+lib
 
 # misc
 .DS_Store

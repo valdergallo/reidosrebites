@@ -1,6 +1,6 @@
 Django==1.10.5
 django-bootstrap3==8.1.0
 django-robots==2.0
-DjangoSEO==1.0
+django-simple-seo==1.0.3
 olefile==0.44
 Pillow==4.0.0

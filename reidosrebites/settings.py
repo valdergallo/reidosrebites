@@ -44,6 +44,7 @@ DJANGO_APPS = [
 THIRDY_APPS = [
     'bootstrap3',
     'robots',
+    'simple_seo',
 ]
 
 PROJECT_APPS = [
@@ -135,3 +136,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# simple django seo
+SEO_MODEL_REGISTRY = (
+    ('leadpage.Metadata', 'ALL'),
+)
