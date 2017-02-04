@@ -25,8 +25,9 @@ SECRET_KEY = 'mjfd8e*z0y487@vgps2_#84zmp*%equ!upc8iavtlafqj)x1vz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
+SITE_ID = 1
 
 # Application definition
 DJANGO_APPS = [
@@ -35,16 +36,19 @@ DJANGO_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sitemaps',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 ]
 
 THIRDY_APPS = [
     'bootstrap3',
+    'robots',
 ]
 
 PROJECT_APPS = [
     'products',
-    'profiles'
+    'leadpage'
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRDY_APPS + PROJECT_APPS
@@ -61,6 +65,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'reidosrebites.urls'
+
+ROBOTS_USE_HOST = False
 
 TEMPLATES = [
     {
