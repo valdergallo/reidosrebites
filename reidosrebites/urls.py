@@ -5,17 +5,9 @@ from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
 from leadpage.sitemaps import StaticViewSitemap
 from leadpage.views import LeadPageView
-from leadpage.seo import Metadata
 from leadpage.sitemaps import LeadPageSitemap
 from products.sitemaps import ProductsSitemap
-from simple_seo.admin import BaseMetadataAdmin
 
-
-class MetadataAdmin(BaseMetadataAdmin):
-    pass
-
-
-admin.site.register(Metadata, MetadataAdmin)
 
 sitemaps = {
     'static': StaticViewSitemap,
