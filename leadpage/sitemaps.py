@@ -1,5 +1,6 @@
 from django.contrib.sitemaps import Sitemap
 from .models import Entry
+from django.urls import reverse
 
 
 class LeadPageSitemap(Sitemap):
@@ -18,7 +19,7 @@ class StaticViewSitemap(Sitemap):
     changefreq = 'daily'
 
     def items(self):
-        return ['main', 'about', 'contact']
+        return ['main']
 
     def location(self, item):
         return reverse(item)

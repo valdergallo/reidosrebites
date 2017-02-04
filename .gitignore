@@ -5,6 +5,7 @@ node_modules
 bin
 fonts
 include
+lib
 
 # testing
 coverage

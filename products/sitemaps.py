@@ -2,6 +2,7 @@
 from django.contrib.sitemaps import Sitemap
 from .models import Product
 
+
 class ProductsSitemap(Sitemap):
     changefreq = "never"
     priority = 0.5
