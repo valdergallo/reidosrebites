@@ -171,7 +171,7 @@ img{
 	line-height: 70px;
 }
 #header .navbar-toggle, #header .nav {
-	margin-top: 32px;
+	margin-top: 35px;
 }
 #header .fixed-top .navbar-header a{
 	line-height: 30px;
@@ -987,7 +987,7 @@ img{
 
 /* start footer */
 #footer .container-full{
-	background: #2a3039;
+	background: #c69f0d;
 	min-width: 50%;
 	padding-bottom: 14px;
 }
